@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfolio - Dethie Amadou SY</title>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #e0f7fa;
+    color: #222;
+  }
+
+  /* HEADER */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #00796b;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    z-index: 1000;
+  }
+  nav a {
+    color: #b2dfdb;
+    margin-left: 2rem;
+    text-decoration: none;
+  }
+
+  /* MAIN */
+  main {
+    margin-top: 90px;
+    margin-right: 350px;
+    padding: 2rem;
+  }
+
+  /* GENERIC SECTIONS */
+  section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+  h2 {
+    font-size: 2.4rem;
+    color: #00796b;
+    border-bottom: 4px solid #004d40;
+    padding-bottom: .4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* PROJECTS */
+  #projets ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 1.5rem;
+    padding: 0;
+  }
+  #projets li {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: .3s ease;
+  }
+  #projets li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(0,0,0,0.15);
+  }
+
+  /* CONTACT FIXED */
+  #contact-fixed {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 330px;
+    background: white;
+    padding: 2rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -6px 0 20px rgba(0,0,0,0.2);
+  }
+  #contact-fixed input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: .6rem;
+    border-radius: 10px;
+    border: 2px solid #00796b;
+    background: #e0f2f1;
+  }
+
+  /* LIGHTBOX */
+  #lightbox {
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:3000;
+  }
+  #lightbox img {
+    max-width:80%;
+    max-height:80%;
+    border-radius:10px;
+    border:4px solid white;
+    margin-bottom: 20px;
+  }
+  #lightbox button {
+    margin: 5px;
+    padding:10px 25px;
+    font-size:1rem;
+    cursor:pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Dethie Amadou SY</h1>
+  <nav>
+    <a href="#apropos">À propos</a>
+    <a href="#experience">Expérience</a>
+    <a href="#projets">Projets</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- À PROPOS -->
+<section id="apropos">
+  <h2>À propos de moi</h2>
+  <p>
+    Je suis passionné d’ingénierie, d’automatisme, d’électronique et de systèmes énergétiques.
+    Rigoureux, curieux et motivé, j’aime analyser, concevoir et optimiser des systèmes
+    techniques complexes.
+  </p>
+</section>
+
+<!-- EXPÉRIENCE -->
+<section id="experience">
+  <h2>Expérience</h2>
+
+  <h3>2025 – 2026 (Alternance) — Technicien Systèmes Automatisés</h3>
+  <h4>Groupe ADP</h4>
+  <ul>
+    <li>Maintenance et diagnostic sur systèmes automatisés de tri bagages.</li>
+    <li>Développement de solutions d'optimisation.</li>
+    <li>Mise en service et amélioration continue.</li>
+  </ul>
+
+  <h3>Avril – Juin 2025 — Stagiaire Technicien Électricité</h3>
+  <h4>ENEDIS</h4>
+  <ul>
+    <li>Travaux sur réseaux BT et HTA.</li>
+    <li>Interventions clientèle.</li>
+    <li>Assistance au diagnostic.</li>
+  </ul>
+</section>
+
+<!-- PROJETS -->
+<section id="projets">
+  <h2>Projets</h2>
+  <ul>
+
+    <li onclick="showImages(['images/station.PNG','images/tri.PNG'])">
+      Maintenance et optimisation d'une station de tri automatisée
+    </li>
+
+    <li onclick="showImages([
+      'images/panneau.PNG',
+      'images/onduleur1.PNG',
+      'images/onduleur.PNG'
+    ])">
+      Dimensionnement et étude d'un système photovoltaïque
+    </li>
+
+    <li onclick="showImages([
+      'images/schelec.PNG',
+      'images/winrelais.PNG'
+    ])">
+      Système de conversion d'énergie
+    </li>
+
+    <li onclick="showImages([
+      'images/compteur.PNG',
+      'images/imprime.PNG'
+    ])">
+      Concevoir, installer et maintenir un système de conversion et de gestion de l’énergie électrique
+    </li>
+
+    <li onclick="showImages([
+      'images/circuit.PNG',
+      'images/robot.PNG'
+    ])">
+      Concevoir un robot mobile autonome capable de détecter et contourner des obstacles
+    </li>
+
+  </ul>
+</section>
+
+</main>
+
+<!-- CONTACT -->
+<aside id="contact-fixed">
+  <h2>Contact</h2>
+  <label>Nom :</label>
+  <input type="text" value="SY" readonly>
+
+  <label>Prénom :</label>
+  <input type="text" value="Dethie Amadou" readonly>
+
+  <label>Email :</label>
+  <input type="email" value="sydethieamadou@gmail.com" readonly>
+</aside>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <img id="lightbox-img" src="">
+  <button onclick="nextImage()">Suivant</button>
+  <button onclick="closeLightbox()">Fermer</button>
+</div>
+
+<script>
+let currentImages = [];
+let currentIndex = 0;
+
+function showImages(images) {
+  currentImages = images;
+  currentIndex = 0;
+  document.getElementById("lightbox-img").src = currentImages[0];
+  document.getElementById("lightbox").style.display = "flex";
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % currentImages.length;
+  document.getElementById("lightbox-img").src = currentImages[currentIndex];
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
