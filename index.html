@@ -87,7 +87,7 @@
     transform: translateY(-4px);
   }
 
-  /* APERÇU CV (caché par défaut) */
+  /* APERÇU CV */
   .cv-preview {
     display: none;
     margin-top: 2rem;
@@ -200,22 +200,77 @@
     en apprentissage dans le domaine des énergies.
   </p>
 
-  <!-- BOUTON MON CV -->
   <div class="cv-download">
     <button onclick="toggleCV()">📄 Mon CV</button>
   </div>
 
-  <!-- APERÇU CV -->
   <div class="cv-preview" id="cvPreview">
     <iframe src="CVSYDethie.pdf"></iframe>
   </div>
 </section>
 
-<!-- EXPÉRIENCE --> <section id="experience"> <h2>Expérience</h2> <h3>2025 – 2026 (Alternance) — Technicien Systèmes Automatisés</h3> <h4>Groupe ADP</h4> <ul> <li>Maintenance et diagnostic sur systèmes automatisés de tri bagages.</li> <li>Développement de solutions d'optimisation.</li> <li>Mise en service et amélioration continue.</li> </ul> <h3>Avril – Juin 2025 — Stagiaire Technicien Électricité</h3> <h4>ENEDIS</h4> <ul> <li>Travaux sur réseaux BT et HTA.</li> <li>Interventions clientèle.</li> <li>Assistance au diagnostic.</li> </ul> </section>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Expérience</h2>
+
+  <h3>2025 – 2026 (Alternance) — Technicien Systèmes Automatisés</h3>
+  <h4>Groupe ADP</h4>
+  <ul>
+    <li>Maintenance et diagnostic sur systèmes automatisés de tri bagages.</li>
+    <li>Développement de solutions d'optimisation.</li>
+    <li>Mise en service et amélioration continue.</li>
+  </ul>
+
+  <h3>Avril – Juin 2025 — Stagiaire Technicien Électricité</h3>
+  <h4>ENEDIS</h4>
+  <ul>
+    <li>Travaux sur réseaux BT et HTA.</li>
+    <li>Interventions clientèle.</li>
+    <li>Assistance au diagnostic.</li>
+  </ul>
+</section>
 
 <!-- PROJETS -->
 <section id="projets">
-<!-- PROJETS --> <section id="projets"> <h2>Projets</h2> <ul> <li onclick="showImages(['images/station.PNG','images/tri.PNG'])"> Maintenance et optimisation d'une station de tri automatisée </li> <li onclick="showImages([ 'images/panneau.png', 'images/onduleur1.PNG', 'images/onduleur.PNG' ])"> Dimensionnement et étude d'un système photovoltaïque </li> <li onclick="showImages([ 'images/schelec.PNG', 'images/Winrelais.png' ])"> Système de conversion d'énergie </li> <li onclick="showImages([ 'images/compteur.png', 'images/imprime.png' ])"> Concevoir, installer et maintenir un système de conversion et de gestion de l’énergie électrique </li> <li onclick="showImages([ 'images/circuit.PNG', 'images/robot.PNG' ])"> Concevoir un robot mobile autonome capable de détecter et contourner des obstacles </li> </ul> </section>
+  <h2>Projets</h2>
+
+  <ul>
+    <li onclick="showImages(['images/station.PNG','images/tri.PNG'])">
+      Maintenance et optimisation d'une station de tri automatisée
+    </li>
+
+    <li onclick="showImages([
+      'images/panneau.png',
+      'images/onduleur1.PNG',
+      'images/onduleur.PNG'
+    ])">
+      Dimensionnement et étude d'un système photovoltaïque
+    </li>
+
+    <li onclick="showImages([
+      'images/schelec.PNG',
+      'images/Winrelais.png'
+    ])">
+      Système de conversion d'énergie
+    </li>
+
+    <li onclick="showImages([
+      'images/compteur.png',
+      'images/imprime.png'
+    ])">
+      Concevoir, installer et maintenir un système de conversion
+      et de gestion de l’énergie électrique
+    </li>
+
+    <li onclick="showImages([
+      'images/circuit.PNG',
+      'images/robot.PNG'
+    ])">
+      Concevoir un robot mobile autonome capable de détecter
+      et contourner des obstacles
+    </li>
+  </ul>
+</section>
 
 </main>
 
@@ -254,15 +309,11 @@ function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
 
-/* TOGGLE CV */
 function toggleCV() {
   const preview = document.getElementById("cvPreview");
-  preview.style.display = (preview.style.display === "block") ? "none" : "block";
+  preview.style.display = preview.style.display === "block" ? "none" : "block";
 }
 </script>
 
 </body>
 </html>
-
-
-
