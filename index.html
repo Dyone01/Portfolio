@@ -15,7 +15,6 @@
     color: #222;
   }
 
-  /* HEADER */
   header {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -39,14 +38,12 @@
     color: white;
   }
 
-  /* MAIN */
   main {
     margin-top: 90px;
     margin-right: 350px;
     padding: 2rem;
   }
 
-  /* SECTIONS */
   section {
     background: white;
     padding: 2rem;
@@ -63,7 +60,6 @@
     margin-bottom: 1.5rem;
   }
 
-  /* BOUTON CV */
   .cv-download {
     margin-top: 2rem;
     text-align: center;
@@ -87,7 +83,6 @@
     transform: translateY(-4px);
   }
 
-  /* APERÇU CV */
   .cv-preview {
     display: none;
     margin-top: 2rem;
@@ -103,7 +98,6 @@
     border: none;
   }
 
-  /* PROJETS */
   #projets ul {
     list-style: none;
     display: grid;
@@ -126,7 +120,6 @@
     box-shadow: 0 16px 30px rgba(0,0,0,0.15);
   }
 
-  /* CONTACT */
   #contact-fixed {
     position: fixed;
     top: 80px;
@@ -148,7 +141,6 @@
     background: #e0f2f1;
   }
 
-  /* LIGHTBOX */
   #lightbox {
     display: none;
     position: fixed;
@@ -190,7 +182,6 @@
 
 <main>
 
-<!-- A PROPOS -->
 <section id="apropos">
   <h2>À propos de moi</h2>
   <p>
@@ -209,7 +200,6 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <h2>Expérience</h2>
 
@@ -230,7 +220,7 @@
   </ul>
 </section>
 
-<!-- PROJETS -->
+<!-- PROJETS (corrigé uniquement ici) -->
 <section id="projets">
   <h2>Projets</h2>
 
@@ -251,31 +241,30 @@
       'images/schelec.PNG',
       'images/Winrelais.png'
     ])">
-       Système de conversion et de gestion de l'énergie électrique
+      Système de conversion et de gestion de l'énergie électrique
     </li>
 
     <li onclick="showImages([
       'images/ecran.png',
-      'images/carte.png'
+      'images/carte.png',
       'images/compteur.png',
       'images/imprime.png'
-     ])">
-          Concevoir un robot mobile autonome capable de détecter
-      et contourner des obstacles
+    ])">
+      Concevoir, installer et maintenir un système de conversion
+      et de gestion de l’énergie électrique
     </li>
 
     <li onclick="showImages([
       'images/circuit.PNG',
       'images/robot.PNG'
     ])">
-      
+      Conception d’un robot mobile autonome
     </li>
   </ul>
 </section>
 
 </main>
 
-<!-- CONTACT -->
 <aside id="contact-fixed">
   <h2>Contact</h2>
   <input type="text" value="SY" readonly>
@@ -283,7 +272,6 @@
   <input type="email" value="sydethieamadou@gmail.com" readonly>
 </aside>
 
-<!-- LIGHTBOX -->
 <div id="lightbox">
   <img id="lightbox-img" src="">
   <button onclick="nextImage()">Suivant</button>
@@ -318,12 +306,3 @@ function toggleCV() {
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
